@@ -31,6 +31,11 @@ export const createCar = async (formData) => {
   });
 
   const data = await req.json();
+  return {
+    msg: data.msg,
+    payload: data.payload,
+    status: req.status,
+  };
 };
 export const updateCar = async (id, formData) => {
   const req = await fetch(`http://localhost:3000:/cars/${id}`, {
