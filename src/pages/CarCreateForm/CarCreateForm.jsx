@@ -35,10 +35,12 @@ export default function CarCreateForm() {
 
       <input type="text" required name="name" placeholder="Enter name" onChange={e=>handleChange(e)}/>
       <input type="text" required name="model" placeholder="Enter model" onChange={e=>handleChange(e)}/>
-      <input type="text" required name="shifting" placeholder="Enter name" onChange={e=>handleChange(e)}/>
-      <input type="text" required name="year" placeholder="Enter name" onChange={e=>handleChange(e)}/>
+      <input type="text" required name="shifting" placeholder="Enter shifting" onChange={e=>handleChange(e)}/>
+      <input type="text" required name="year" placeholder="Enter year" onChange={e=>handleChange(e)}/>
 
       </form>
+
+
 
 
       <Link to={"/"}>

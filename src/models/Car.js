@@ -19,6 +19,11 @@ export const getCar = async (id) => {
   });
 
   const data = await req.json();
+  return {
+    msg: data.msg,
+    payload: data.payload,
+    status: req.status
+  }
 };
 export const createCar = async (formData) => {
   const req = await fetch("http://localhost:3000:/cars", {
@@ -48,6 +53,11 @@ export const updateCar = async (id, formData) => {
   });
 
   const data = await req.json();
+  return {
+    msg: data.msg,
+    payload: data.payload,
+    status: req.status
+  }
 };
 export const deleteCar = async (id) => {
   const req = await fetch(`http://localhost:3000:/cars/${id}`, {
@@ -59,4 +69,9 @@ export const deleteCar = async (id) => {
   });
 
   const data = await req.json();
+  return {
+    msg: data.msg,
+    payload: data.payload,
+    status: req.status
+  }
 };
