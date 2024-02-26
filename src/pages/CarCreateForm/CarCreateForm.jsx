@@ -15,8 +15,15 @@ export default function CarCreateForm() {
         setinfo(car.msg)
       }
   };
+  useEffect(()=>{
+    console.log(formData)
+  }, [formData])
 
-  const handleChange = () => {};
+  const handleChange = (e) => {
+
+    setFormData({...formData, [e.target.name]: e.target.value})
+
+  };
 
   const handlePost = (e) => {
     e.preventDefault();
@@ -35,8 +42,11 @@ export default function CarCreateForm() {
 
       <input type="text" required name="name" placeholder="Enter name" onChange={e=>handleChange(e)}/>
       <input type="text" required name="model" placeholder="Enter model" onChange={e=>handleChange(e)}/>
+      <input type="text" required name="color" placeholder="Enter color" onChange={e=>handleChange(e)}/>
       <input type="text" required name="shifting" placeholder="Enter shifting" onChange={e=>handleChange(e)}/>
       <input type="text" required name="year" placeholder="Enter year" onChange={e=>handleChange(e)}/>
+
+      <button onClick={handlePost}>Send</button>
 
       </form>
 
